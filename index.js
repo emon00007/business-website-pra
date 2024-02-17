@@ -45,15 +45,34 @@ const btn = document.getElementById('apply-btn')
             else{
                 alert('Invalid Coupon')
                 document.getElementById('input-field').value = '';
+                
             }
                 
             } 
             else {alert('Buy more them 200$ you gat 20% coupon')
-            document.getElementById('input-field').value = '';
+             document.getElementById('input-field').value = '';
                 
             }
             
         })
+
+        const buttton = document.getElementById('Congratulations')
+        const butttons= buttton.addEventListener('click',function(){
+        if(totalPrice > 0){
+            const element =document.getElementById('off')
+            element.classList.remove('hidden')
+        }
+        else{
+            const element =document.getElementById('off')
+            element.classList.add('hidden')
+        
+            alert('select prouct')
+            
+        }
+
+        })
+
+        
 
       
 
